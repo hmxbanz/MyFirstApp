@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:background="@drawable/menu_item_border">
+
+    <ImageView
+        android:id="@+id/fragment_menu_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="8dp"/>
+
+    <TextView
+        android:id="@+id/fragment_menu_text"
+        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:gravity="left"
+        android:padding="8dp"
+        android:textSize="24sp"
+        android:textColor="@android:color/black"
+        />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_spinner_24dp"
+        android:padding="8dp"/>
+
+</LinearLayout>

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.administrator.hmxfirstapp"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"></uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"></uses-permission>
+    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"></uses-permission>
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <!-- 为测试添加 android.test.InstrumentationTestRunner -->
+    <instrumentation
+        android:name="android.test.InstrumentationTestRunner"
+        android:targetPackage="com.example.administrator.hmxfirstapp"
+        android:label="test"
+        />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/icon"
+        android:label="@string/app_name"
+        android:logo="@drawable/icon" >
+
+        <uses-library android:name="android.test.runner" /><!-- 为测试添加 android.test.runner-->
+        <!--友盟自动更新所有-->
+        <meta-data android:value="55ceffdd67e58e792200364a" android:name="UMENG_APPKEY"/>
+        <meta-data android:value="Channel ID" android:name="UMENG_CHANNEL"/>
+        <service
+            android:name="com.umeng.update.net.DownloadingService"
+            android:process=":DownloadingService" />
+        <activity
+            android:name="com.umeng.update.UpdateDialogActivity"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <!--友盟自动更新所有-->
+
+        <activity  android:name=".MainActivity"  android:logo="@android:drawable/ic_menu_camera" >
+
+        </activity>
+        <activity android:logo="@android:drawable/ic_menu_camera" android:name=".UserInfoActivity"/>
+        <activity android:name=".StartActivity" android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:logo="@android:drawable/ic_menu_camera" android:name=".GuideActivity"/>
+        <activity
+            android:name=".HelloEditText"
+            android:label="EditText实例"
+            android:parentActivityName=".MainActivity" >
+
+            <!-- <meta-data -->
+            <!-- android:name="android.support.PARENT_ACTIVITY" -->
+            <!-- android:value=".MainActivity" /> -->
+
+        </activity>
+        <activity
+            android:name=".IntentPassValue"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name=".IntentPassValue2"
+            android:label="@string/app_name"
+            android:theme="@style/ActivityTheme" >
+        </activity>
+        <activity
+            android:name=".Menu.HomeActivity"
+            android:theme="@style/AppTheme.Base"
+            android:label="HomeActivity">
+        </activity>
+        <activity   android:name=".ExampleActivity"   android:label="ExampleActivity">
+        </activity>
+        <activity
+            android:name=".Notification"
+            android:label="@string/title_activity_notification"
+            android:parentActivityName=".MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.administrator.hmxfirstapp.MainActivity" />
+        </activity>
+        <activity
+            android:name=".Function.CustomToast"
+            android:label="@string/title_activity_custom_toast"
+            android:parentActivityName=".MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.administrator.hmxfirstapp.MainActivity" />
+        </activity>
+    </application>
+
+</manifest>
